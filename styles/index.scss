@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'vars';
+@import '../componant/header/style.scss';
+@import '../componant/form/style.scss';
+@import '../componant/todoList/style.scss';
+
+.container {
+  height: 100%;
+}
+.container-background {
+  height: 40%;
+  background-image: url('../asset/lake.jpg');
+  background-size: cover;
+}
+.todoContainer {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  color: rgb(143, 142, 142);
+}

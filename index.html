@@ -1,0 +1,42 @@
+
+<head>
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+</head>
+  <body>
+    <div class="container">
+      <div  name='lake' class="container-background"></div> 
+        <div class="todoContainer">
+        </div>
+      <script src="./index.js" type="module"></script>
+      <script>
+
+        // change to finished task
+        const handlerChange = function(event) { 
+        if (this.event.target.parentNode.classList.contains('allTodo-li--finished')) {
+          this.event.target.nextElementSibling.nextElementSibling.remove()
+          this.event.target.parentNode.classList.remove('allTodo-li--finished');
+          this.event.target.nextElementSibling.classList.remove('allTodo-todo--finished')
+        
+        }
+        else  if (!this.event.target.parentNode.classList.contains('allTodo-li--finished')){
+          const taskDelete = "<button onclick='handlerClick()' class='allTodo-delete'> suprimer</button>";
+          this.event.target.parentNode.insertAdjacentHTML('beforeend', taskDelete)
+          this.event.target.parentNode.classList.add('allTodo-li--finished');
+          this.event.target.nextElementSibling.classList.add('allTodo-todo--finished') 
+          }
+        }
+      </script>
+      <script>
+        const handlerClick = function (event) {
+          this.event.target.parentNode.remove()
+        }
+      </script>
+    </div>
+  </body>
+</html>

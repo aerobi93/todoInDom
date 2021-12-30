@@ -1,0 +1,50 @@
+.form {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  &-text, &-submit {
+    background-color: transparent;
+    padding: $padding;
+    font-size: $fontSize;
+
+    &--light {
+      color: white;
+      border-top: white 3px solid; 
+      border-bottom: white 3px solid;
+     }
+     &--dark {
+      color: black;
+      border-top: black 3px solid; 
+      border-bottom: black 3px solid;
+    }
+  }
+    &-text {
+      width: 80%;
+      font-size: $fontSize;
+      &--light {
+        color: white;
+        text-shadow: black 2px 2px;
+        &::placeholder {
+          color: white;
+        }
+      }
+      &--dark {
+        color: black;
+        text-shadow: white 1px 1px;
+
+        &::placeholder {
+          color: black;
+        }
+      }
+    }
+  &-submit{
+    width: 20%;
+  }
+}
+
+  .afterBackgroundlight {
+    background-color: gray;
+  }
+  .afterBackgrounddark {
+    background-color: rgba(233, 233, 227, 0.829);
+  }

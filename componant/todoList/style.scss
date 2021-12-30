@@ -1,0 +1,80 @@
+
+.allTodo {
+  margin-top: $margin * 0.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+  
+  width: 100%;
+  &--dark {
+    background-color: black; 
+  }
+  &--light {
+    background-color: white;
+  }
+
+  &-li {
+    justify-self: center;
+    display: flex;
+    align-content: baseline;
+    padding: $padding 0;
+    margin: $margin / 2 20%;
+    border-bottom: gray 3px solid ;
+    border-radius: 10px;
+    width: 60%;
+   
+
+    &--light {
+      background-color: rgb(214, 209, 209);
+      box-shadow: gray 2px 2px;
+    }
+    &--dark {
+      background-color: gray;
+      box-shadow: wheat 2px 2px;
+    }
+    &--finished {
+      opacity: 0.5;
+      background-color: black;
+    }
+  }
+  &-radio {
+    margin: 0 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+   height:1.5rem;
+   width: 1.5rem;
+   border-radius: 50%;
+   border: black 1px solid;
+   margin-right: $margin;
+   background-color: white;
+  }
+  &-todo {
+    display: inline;
+    min-width: 70px;
+    position: relative;
+    font-size: $fontSize; 
+    font-weight: bolder;
+    &--finished {
+      text-decoration: line-through;
+    }
+    &--light {
+      color: black;
+      text-shadow: white 1px 1px;
+    }
+    &--dark {
+      color: white;
+      text-shadow: black 1px 1px;
+
+    }
+  }
+  &-delete {
+    width: 20%;
+    font-size: $fontSize *0.75;
+    font-weight: bolder;
+    background-color: transparent;
+    color: red;
+    text-shadow: black 2px 2px;
+    border: none;
+  }
+}

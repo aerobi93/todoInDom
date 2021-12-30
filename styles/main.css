@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0; }
+  .header-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-shadow: red 2px 2px; }
+    .header-title--light {
+      color: white; }
+    .header-title--dark {
+      color: black; }
+  .header-theme {
+    margin-left: 2rem; }
+    .header-theme--light:after {
+      content: '\263D';
+      font-size: 2.25rem;
+      color: black; }
+    .header-theme--dark:after {
+      content: '\263C';
+      font-size: 2.25rem;
+      color: white; }
+  .header-changeBackground {
+    margin-left: 2rem;
+    font-size: 2.25rem;
+    color: white; }
+
+.displayBackground {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0; }
+  .displayBackground-figure {
+    width: 25%;
+    padding: 1rem; }
+  .displayBackground-img {
+    width: 100%;
+    border-radius: 25%;
+    background-size: contain; }
+    .displayBackground-img--light {
+      border: white 1px solid; }
+    .displayBackground-img--dark {
+      border: black 1px solid; }
+  .displayBackground--off {
+    display: none; }
+
+.form {
+  width: 60%;
+  margin: auto;
+  display: flex; }
+  .form-text, .form-submit {
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 1.5rem; }
+    .form-text--light, .form-submit--light {
+      color: white;
+      border-top: white 3px solid;
+      border-bottom: white 3px solid; }
+    .form-text--dark, .form-submit--dark {
+      color: black;
+      border-top: black 3px solid;
+      border-bottom: black 3px solid; }
+  .form-text {
+    width: 80%;
+    font-size: 1.5rem; }
+    .form-text--light {
+      color: white;
+      text-shadow: black 2px 2px; }
+      .form-text--light::placeholder {
+        color: white; }
+    .form-text--dark {
+      color: black;
+      text-shadow: white 1px 1px; }
+      .form-text--dark::placeholder {
+        color: black; }
+  .form-submit {
+    width: 20%; }
+
+.afterBackgroundlight {
+  background-color: gray; }
+
+.afterBackgrounddark {
+  background-color: rgba(233, 233, 227, 0.829); }
+
+.allTodo {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+  width: 100%; }
+  .allTodo--dark {
+    background-color: black; }
+  .allTodo--light {
+    background-color: white; }
+  .allTodo-li {
+    justify-self: center;
+    display: flex;
+    align-content: baseline;
+    padding: 1rem 0;
+    margin: 1rem 20%;
+    border-bottom: gray 3px solid;
+    border-radius: 10px;
+    width: 60%; }
+    .allTodo-li--light {
+      background-color: #d6d1d1;
+      box-shadow: gray 2px 2px; }
+    .allTodo-li--dark {
+      background-color: gray;
+      box-shadow: wheat 2px 2px; }
+    .allTodo-li--finished {
+      opacity: 0.5;
+      background-color: black; }
+  .allTodo-radio {
+    margin: 0 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: black 1px solid;
+    margin-right: 2rem;
+    background-color: white; }
+  .allTodo-todo {
+    display: inline;
+    min-width: 70px;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bolder; }
+    .allTodo-todo--finished {
+      text-decoration: line-through; }
+    .allTodo-todo--light {
+      color: black;
+      text-shadow: white 1px 1px; }
+    .allTodo-todo--dark {
+      color: white;
+      text-shadow: black 1px 1px; }
+  .allTodo-delete {
+    width: 20%;
+    font-size: 1.125rem;
+    font-weight: bolder;
+    background-color: transparent;
+    color: red;
+    text-shadow: black 2px 2px;
+    border: none; }
+
+.container {
+  height: 100%; }
+
+.container-background {
+  height: 40%;
+  background-image: url("../asset/lake.jpg");
+  background-size: cover; }
+
+.todoContainer {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  color: #8f8e8e; }
+
+/*# sourceMappingURL=main.css.map */

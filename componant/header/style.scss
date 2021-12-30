@@ -1,0 +1,67 @@
+.header {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: $padding*2 0;
+  
+  &-title {
+    font-size: $fontSize *2;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-shadow: red 2px 2px;
+  
+    &--light {
+      color: white
+    }
+    &--dark {
+      color: black
+    }
+  }
+    &-theme {
+      margin-left: $margin;
+      &--light:after {
+        content: '\263D';
+        font-size: $fontSize * 1.5;
+        color: black;
+      }
+      &--dark:after {
+        content: '\263C';
+        font-size: $fontSize * 1.5;
+        color: white;
+      }
+    }
+  
+    &-changeBackground {
+      margin-left: $margin;
+      font-size: $fontSize * 1.5 ;
+      color: white;
+    }
+  }
+  
+  .displayBackground {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $margin 0;
+  
+    &-figure {
+      width: 25%;
+      padding: $padding ;
+    }
+    &-img{
+      width: 100%;
+      border-radius: 25%;
+      background-size: contain;
+      
+      &--light {
+        border: white 1px solid;
+      }
+      &--dark {
+        border: black 1px solid;
+      }
+    }
+  &--off {
+    display:none
+  }
+}
+ 

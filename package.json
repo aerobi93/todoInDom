@@ -1,0 +1,12 @@
+{
+  "name": "totolist-dom",
+  "version": "1.0.0",
+  "description": "todolist ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch styles/index.scss:styles/main.css"
+  },
+  "author": "aerobi",
+  "license": "ISC"
+}
